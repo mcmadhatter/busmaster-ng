@@ -251,9 +251,7 @@ typedef struct SHC31_RX_THREAD_STRUCT
 typedef CONFIGRET (WINAPI *SHC31_GET_DEVICE_INSTANCE_ID_FN)(LPCWSTR pszDeviceInterface, CONST DEVPROPKEY* PropertyKey, DEVPROPTYPE* PropertyType, PBYTE PropertyBuffer, PULONG PropertyBufferSize, ULONG ulFlags);
 
 /**
- * Free function declarations (Win32 thread entry and the WinUSB layer; the
- * Pektron standard forbids 'static', so these have module-prefixed
- * external names).
+ * Free function declarations (Win32 thread entry and the WinUSB layer;
  */
 DWORD WINAPI Shc31RxThreadProc(LPVOID pParam);
 bool Shc31WinUsbOpen(const wchar_t* pacPath, HANDLE* phDevice, WINUSB_INTERFACE_HANDLE* phWinUsb, UCHAR* pucPipeIn, UCHAR* pucPipeOut);
